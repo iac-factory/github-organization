@@ -20,12 +20,12 @@ variable "organization" {
     }
 }
 
-variable "teams" {
-    description = "GitHub Organizational Team(s)"
+variable "all-teams" {
+    description = "GitHub Organizational Team(s), All-Teams Specification"
     nullable = false
-    type = list(string)
+    type = bool
 
-    default = []
+    default = true
 }
 
 variable "username" {

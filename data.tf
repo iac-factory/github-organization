@@ -3,5 +3,5 @@ data "github_organization" "organization" {
 }
 
 data "github_organization_teams" "teams" {
-    root_teams_only = false
+    root_teams_only = !(var.all-teams)
 }
