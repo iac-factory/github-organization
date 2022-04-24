@@ -1,7 +1,10 @@
+/// Note Issue: https://github.com/integrations/terraform-provider-github/issues/1123
+
 variable "token" {
     description = "GitHub Provider OAuth Token"
     nullable = false
     type = string
+    sensitive = true
 
     validation {
         condition = var.token != null && var.token != ""
